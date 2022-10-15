@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ViewallTrainComponent implements OnInit {
 
   constructor() { }
+  status:boolean=false
   readvalue=()=>{
     this.name="raju"
+    this.status=true
   }
   name="aravind"
 
