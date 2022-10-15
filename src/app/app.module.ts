@@ -6,22 +6,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewallTrainComponent } from './viewall-train/viewall-train.component';
+import { ListallComponent } from './listall/listall.component';
+import { HttpClientModule } from '@angular/common/http';
 const appRoutes:Routes=[
   {
     path:"",component:ViewallTrainComponent
+  },
+  {
+    path:"all",component:ListallComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewallTrainComponent
+    ViewallTrainComponent,
+    ListallComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
